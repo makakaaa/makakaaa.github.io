@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /licence/
+Disallow: /log/
+
+
+Sitemap: https://makakaaa.github.io/Its_me.github.io/sitemap.xml

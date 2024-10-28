@@ -1,0 +1,378 @@
+@media (max-width: 1200px) {
+    body  {
+        width: 1080px;
+    }
+    #home-link {
+        margin-right: 825px;
+    }
+    h1 {
+        width: auto;
+    }
+    #list-projects {
+        width: auto;
+        margin-left: 200px;
+    }
+}
+@media (max-width: 1000px) {
+    body  {
+        width: 900px;
+    }
+    #home-link {
+        margin-right: 645px;
+    }
+    header img {
+        height: 500px;
+        margin-top: 40px;
+        margin-left: 10px;
+    }
+    .hdiv {
+        width: 600px;
+        height: auto;
+        margin-left: 60px;
+        margin-top: 220px;
+    }
+    #p-one {
+        margin: 0;
+        font-size: 350%;
+    }
+    #p-two {
+        font-size: 230%;
+        margin: 0;
+        margin-top: 10px;
+    }
+    #p-two span {
+        margin-right: 10px;
+    }
+    #p-thre {
+        font-size: 170%;
+        margin: 0;
+        margin-top: 7px;
+    }
+    main container {
+        display: flex;
+        justify-content: center;
+    }
+    .cont-div {
+        width: 200px;
+        height: 240px;
+        margin: 10px;
+        border-radius: 40px;
+    }
+    .cont-div img {
+        width: 90px;
+        margin-top: 20px;
+    }
+    .p-title {
+        color: #ffffff;
+        margin: 0;
+        font-size: 150%;
+        font-weight: bold;
+    }
+    .p-descrip {
+        color: #b9d5fd;
+        margin: 0;
+        margin-top: 15px;
+        font-size: 140%;
+        font-weight: bold;
+    }
+    #d-4 img {
+        width: 75px;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+    #d-3 img {
+        margin-bottom: 3px;
+    }
+    .about-me-div {
+        margin-left: 30px;
+    }
+    .about-me-div h1 {
+        font-size: 200%;
+    }
+    .about-me-div p {
+        font-size: 105%;
+        letter-spacing: 0.5px;
+        line-height: 1.5;
+    }
+    .contact {
+        margin-top: 50px;
+    }
+    .how-contact-punkt {
+        margin-bottom: 20px; 
+        font-size: 105%;
+}
+    .how-contact-punkt img {
+        width: 60px;
+    }
+    .how-contact-punkt p {
+        margin-left: 18px;
+        margin-top: 10px;
+    }
+    #tg {
+        margin-top: 17px;
+    }
+    #list-projects {
+        width: auto;
+        margin-left: 150px;
+        margin-top: 70px;
+    }
+    
+}
+@media (max-width: 768px) {
+    body  {
+        width: 691px;
+    }
+    header {
+        margin-bottom: 90px;
+    }
+    #home-link {
+        margin-right: 440px;
+    }
+    header img {
+        height: 400px;
+        margin-top: 30px;
+    }
+    .hdiv {
+        width: auto;
+        margin-left: 50px;
+        margin-top: 120px;
+    }
+    #p-one {
+        margin: 0;
+        font-size: 310%;
+    }
+    #p-two {
+        font-size: 190%;
+        margin: 0;
+        margin-top: 10px;
+    }
+    #p-two span {
+        margin-right: 120px;
+    }
+    #p-thre {
+        font-size: 140%;
+        margin: 0;
+        margin-top: 10px;
+    }
+    .cont-div {
+        width: 150px;
+        height: 200px;
+        margin: 10px;
+        border-radius: 30px;
+    }
+    .cont-div img {
+        width: 70px;
+        margin-top: 15px;
+    }
+    .p-title {
+        margin: 0;
+        font-size: 120%;
+    }
+    .p-descrip {
+        margin: 0;
+        margin-top: 8px;
+        font-size: 120%;
+    }
+    #d-4 img {
+        width: 60px;
+        margin-top: 12px;
+        margin-bottom: 15px;
+    }
+    #d-3 img {
+        margin-bottom: 3px;
+    }
+    .about-me-div {
+        margin-top: 30px;
+        width: 90%;
+    }
+    .about-me-div h1 {
+        font-size: 180%;
+    }
+    .about-me-div p {
+        font-size: 105%;
+        letter-spacing: 0.3px;
+        line-height: 1.2;
+    }
+    .contact {
+        display: inline-block;
+        justify-content: center;
+        margin-top: 50px;
+        width: auto;
+        padding: 0;
+    }
+    .how-contact-punkt img {
+        width: 45px;
+    }
+    .how-contact {
+        width: auto;
+        height: 220px;
+        margin-right: 0;
+        margin-left: 100px;
+    }
+    #phone {
+        margin-top: 0;
+    }
+    #map {
+        width: auto;
+        text-align: center;
+        font-size: 120%;
+        margin-left: 100px;
+    }
+    iframe {
+        width: 500px;
+        height: 380px;
+        border-radius: 10%;
+        box-shadow: 5px 5px 20px silver;
+    }
+    h1 {
+        font-size: 190%;
+    }
+    #list-projects ul li a {
+        font-size: 110%;
+    }
+    #list-projects {
+        margin-top: 50px;
+        margin-left: 80px;
+    }
+
+
+}
+@media (max-width: 480px) {
+    body  {
+        width: 432px;
+    }
+    header {
+        margin-bottom: 50px;
+    }
+    #home-link {
+        margin-right: 185px;
+    }
+    .head-info {
+        display: block;
+    }
+    header img {
+        height: 400px;
+        margin-top: 20px;
+        margin-left: 30px;
+    }
+    .hdiv {
+        margin-top: 80px;
+    }
+    #p-two span {
+        margin-right: 15px;
+    }
+    main container {
+        display: block;
+    }
+    .cont-div {
+        width: 200px;
+        height: 180px;
+        margin: 10px;
+        margin-left: 110px;
+        border-radius: 30px;
+    }
+    .how-contact {
+        margin-left: 80px;
+    }
+    #map {
+        margin-left: 50px;
+    }
+    iframe {
+        width: 300px;
+        height: 300px;
+        border-radius: 10%;
+        box-shadow: 5px 5px 20px silver;
+    }
+    h1 {
+        font-size: 160%;
+    }
+    #list-projects ul li a {
+        font-size: 100%;
+    }
+    #list-projects {
+        margin-top: 30px;
+        margin-left: 20px;
+    }
+}
+@media (max-width: 400px) {
+    body {
+        width: 360px;
+    }
+    #home-link {
+        margin-right: 110px;
+    }
+    header img {
+        height: 330px;
+        margin-top: 20px;
+        margin-left: 30px;
+    }
+    .hdiv {
+        margin-top: 60px;
+        margin-left: 40px;
+    }
+    #p-one {
+        font-size: 250%;
+    }
+    #p-two {
+        font-size: 150%;
+    }
+    #p-two span {
+        margin-right: 7px;
+    }
+    #p-thre {
+        font-size: 100%;
+    }
+    .cont-div {
+        margin: 10px;
+        margin-left: 85px;
+    }
+    .about-me-div h1 {
+        font-size: 150%;
+    }
+    .about-me-div p {
+        font-size: 100%;
+        letter-spacing: 0.4px;
+        line-height: 1.3;
+    }
+    .how-contact {
+        margin-left: 30px;
+    }
+    #map {
+        margin-left: 25px;
+    }
+    h1 {
+        font-size: 155%;
+    }
+    #list-projects ul li a {
+        font-size: 100%;
+    }
+    #list-projects {
+        margin-top: 20px;
+        margin-left: 2px;
+    }
+}
+@media (max-width: 360px) {
+    body {
+        width: 324px;
+    }
+    #home-link {
+        margin-right: 80px;
+    }
+    header img {
+        height: 310px;
+        margin-top: 15px;
+        margin-left: 20px;
+    }
+    .hdiv {
+        margin-left: 25px;
+    }
+    .cont-div {
+        margin-left: 60px;
+    }
+    .how-contact {
+        margin-left: 15px;
+    }
+    #map {
+        margin-left: 10px;
+    }
+}

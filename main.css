@@ -1,0 +1,199 @@
+
+.head-info {
+    display: flex;
+}
+header img {
+    height: 500px;
+    filter: drop-shadow(20px 50px #709fdc);
+    margin-top: 50px;
+    margin-left: 100px;
+}
+.hdiv {
+    width: 600px;
+    height: 300px;
+    margin-left: 100px;
+    margin-top: 150px;
+}
+#p-one {
+    font-weight: bold;
+    margin: 0;
+    color: rgba(39, 70, 132, 0.4);
+    font-size: 400%;
+}
+#p-two {
+    color: #071739;
+    font-size: 300%;
+}
+#p-two span {
+    font-weight: bold;
+    color: rgba(39, 70, 132, 0.4);
+    margin-right: 20px;
+}
+#p-thre {
+    font-weight: bold;
+    color: rgba(39, 70, 132, 0.4);
+    font-size: 200%;
+}
+
+
+
+
+
+
+main container {
+    display: flex;
+    justify-content: center;
+}
+.cont-div {
+    width: 300px;
+    height: 330px;
+    background-color: #274684;
+    margin: 10px;
+    border-radius: 50px;
+    filter: drop-shadow(10px 10px 5px silver);
+    justify-content: center;
+    text-align: center;
+}
+.cont-div img {
+    width: 130px;
+    margin-top: 30px;
+}
+.p-title {
+    color: #ffffff;
+    margin: 0;
+    font-size: 180%;
+    font-weight: bold;
+}
+.p-descrip {
+    color: #b9d5fd;
+    margin: 0;
+    margin-top: 20px;
+    font-size: 180%;
+    font-weight: bold;
+}
+#d-4 img {
+    width: 100px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+#d-3 img {
+    margin-bottom: 10px;
+}
+
+
+
+.about-me-div {
+    margin: auto;
+    margin-top: 50px;
+    justify-content: center;
+    width: 900px;
+}
+.about-me-div h1 {
+    color: #071739;
+    text-align: center;
+    font-size: 220%;
+}
+.about-me-div p {
+    font-size: 115%;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    color: #071739;
+}
+
+
+
+
+.how-contact-punkt {
+            display: flex;
+            margin-bottom: 20px; 
+            color: #274684;
+            font-size: 120%;
+}
+.how-contact-punkt p {
+    margin-left: 30px;
+}
+#gmail-p {
+    margin-top: 25px;
+}
+#phone {
+    margin-top: 140px;
+}
+.how-contact-punkt img {
+    width: 80px;
+}
+.contact {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+.how-contact {
+    width: 500px;
+    height: 500px;
+    margin-right: 50px;
+}
+#map {
+    width: 500px;
+    text-align: center;
+    font-size: 120%;
+}
+iframe {
+    width: 500px;
+    height: 380px;
+    border-radius: 10%;
+    box-shadow: 5px 5px 20px silver;
+}
+
+
+
+
+
+
+
+
+.contact-form {
+    width: 50%; /* Занимает 50% ширины экрана */
+    margin: 20px auto; /* Центрирует блок */
+    padding: 20px;
+    border-radius: 5px;
+}
+.contact-form h2 {
+    font-size: 180%;
+    text-align: center;
+    font-weight: bold;
+}
+.contact-form input, 
+.contact-form textarea {
+    width: 100%; /* Занимает 100% ширины блока */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #274684; /* Цвет рамки полей ввода */
+    border-radius: 5px;
+}
+.contact-form button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #274684; /* Цвет кнопки */
+    color: white; /* Цвет текста кнопки */
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-left: 43%;
+    font-size: 110%;
+}
+.contact-form button:hover {
+    background-color: #071739; /* Цвет кнопки при наведении */
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
