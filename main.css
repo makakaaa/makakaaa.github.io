@@ -150,40 +150,7 @@ iframe {
 
 
 
-.contact-form {
-    width: 50%; /* Занимает 50% ширины экрана */
-    margin: 20px auto; /* Центрирует блок */
-    padding: 20px;
-    border-radius: 5px;
-}
-.contact-form h2 {
-    font-size: 180%;
-    text-align: center;
-    font-weight: bold;
-}
-.contact-form input, 
-.contact-form textarea {
-    width: 100%; /* Занимает 100% ширины блока */
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #274684; /* Цвет рамки полей ввода */
-    border-radius: 5px;
-}
-.contact-form button {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 10px;
-    background-color: #274684; /* Цвет кнопки */
-    color: white; /* Цвет текста кнопки */
-    cursor: pointer;
-    transition: all 0.3s;
-    margin-left: 43%;
-    font-size: 110%;
-}
-.contact-form button:hover {
-    background-color: #071739; /* Цвет кнопки при наведении */
-    transform: scale(1.05);
-}
+
 
 
 
