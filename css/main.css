@@ -1,0 +1,179 @@
+* {
+    font-family: "Poppins", sans-serif;
+}
+body {
+    width: 1100px;
+    background-color: #0e0e0e;
+    margin: auto;
+}
+header {
+    margin-bottom: 100px;
+}
+header nav {
+    height: 40px;
+    padding-top: 20px;
+}
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 105%;
+    margin-left: 10px;
+    padding: 10px 20px;
+    border-radius: 17px;
+    transition: all 0.35s;
+}
+header nav a:hover {
+    background-color: white;
+    color: #0e0e0e;
+}
+.about-me-nav {
+    margin-left: 590px;
+    border: white solid 2px;
+    border-radius: 0;
+}
+.header-info {
+    display: flex;
+    margin-top: 50px;
+}
+.header-info-text {
+    margin-right: auto;
+    color: white;
+    width: 520px;
+    padding-top: 150px;
+    padding-left: 50px;
+}
+.header-info-text h1 {
+    font-size: 650%;
+    line-height: 5.8rem;
+    margin: 0;
+    padding: 0;
+}
+.header-info-text h4 {
+    margin: 0;
+    padding: 0;
+}
+.header-info img {
+    height: 550px;
+    margin-left: auto;
+}
+
+
+
+
+.to-table {
+    color: #adadad;
+    text-align: center;
+}
+.first-p {
+    color: #90ff00;
+    font-weight: bold;
+    font-size: 120%;
+    margin-bottom: 0;
+}
+.second-p {
+    margin-top: 0;
+}
+table.logo-table {
+    margin-bottom: 50px;
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #0e0e0e;
+}
+.logo-item {
+    text-align: center;
+    padding: 20px 10px;
+    border: 1px solid #ababab;
+    width: 100px; 
+}
+
+.logo-item span {
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.table-descrip {
+    font-size: 80%;
+    text-transform: none;
+    color: #d5d5d5;
+}
+
+
+
+
+.about-me {
+    color: white;
+    width: 900px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+.about-me h2 {
+    text-align: center;
+}
+
+
+
+
+
+.projects-main-link {
+    display: flex;
+    width: 800px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+.projects-main-link p {
+    color: white;
+    font-size: 120%;
+    margin-left: 80px;
+    margin-right: 120px;
+    margin-top: 37px;
+}
+.projects-main-link p a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    color: #90ff00;
+    margin-left: 10px;
+    transition: all 0.3s;
+}.projects-main-link p a:hover {
+    color: #ccff8a;
+}
+
+
+
+
+
+
+.contact-me {
+    color: white;
+    width: 800px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.contact-me h2 {
+    text-align: center;
+    margin-bottom: 60px;
+}
+.contact-type {
+    display: flex;
+    margin-left: 70px;
+    margin-bottom: 30px;
+}
+.contact-type img {
+    width: 90px;
+}
+.contact-type p {
+    font-size: 120%;
+    margin-left: 50px;
+}
+
+
+
+
+
+
+footer {
+    color: white;
+    text-align: center;
+}

@@ -1,0 +1,684 @@
+@media screen and (min-width: 300px) {
+    body {
+        width: 300px;
+    }
+    header {
+        margin-bottom: 30px;
+    }
+    header nav a {
+        font-size: 75%;
+        margin-left: 5px;
+        padding: 1px 3px;
+    }
+    .about-me-nav {
+        margin-left: 40px;
+    }
+    .header-info {
+        display: flex; 
+        flex-direction: column;
+        margin-top: 30px;
+    }
+    .header-info-text {
+        order: 2; 
+        margin: auto;
+    }
+    .header-info img {
+        order: 1; 
+        margin: auto;
+    }
+    .header-info-text {
+        width: 220px;
+        height: 110px;
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+    .header-info-text h1 {
+        font-size: 250%;
+        line-height: 2.3rem;
+    }
+    .header-info-text h4 {
+        font-size: 80%;
+    }
+    .header-info img {
+        height: 270px;
+        width: 270px;
+    }
+    .first-p {
+        font-size: 100%;
+    }
+    .second-p {
+        font-size: 90%;
+    }
+    table.logo-table {
+        margin-bottom: 50px;
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #0e0e0e;
+    }
+    .logo-item {
+        display: block;
+        text-align: center;
+        padding: 20px 10px;
+        border: 1px solid #ababab;
+        width: 200px; 
+        margin: 0 auto;
+    }
+    .table-descrip {
+        font-size: 60%;
+    }
+    .logo-item span {
+        font-size: 90%;
+        text-align: center;
+    }
+    .about-me {
+        width: 270px;
+        margin-bottom: 15px;
+    }
+    .about-me p {
+        font-size: 80%;
+    }
+    .projects-main-link {
+        width: 300px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    .projects-main-link p {
+        font-size: 90%;
+        margin-left: 10px;
+        margin-right: 20px;
+        width: 200px;
+    }
+    .projects-main-link img {
+        width: 60px;
+        height: 60px;
+        margin-top: 30px;
+    }
+    .contact-me {
+        width: 300px;
+        margin-bottom: 30px;
+    }
+    .contact-me h2 {
+        margin-bottom: 10px;
+        font-size: 110%;
+    }
+    .contact-type {
+        margin-left: 15px;
+        margin-bottom: 1px;
+    }
+    .contact-type img {
+        width: 30px;
+        height: 30px;
+        margin-top: 12px;
+    }
+    .contact-type p {
+        font-size: 92%;
+        margin-left: 25px;
+    }
+    footer p {
+        font-size: 60%;
+    }
+}
+@media screen and (min-width: 400px) {
+    body {
+        width: 400px;
+    }
+    header {
+        margin-bottom: 40px;
+    }
+    header nav a {
+        font-size: 80%;
+        margin-left: 5px;
+        padding: 5px 10px;
+    }
+    .about-me-nav {
+        margin-left: 60px;
+    }
+    .header-info {
+        margin-top: 20px;
+    }
+    .header-info-text {
+        width: 180px;
+        padding-left: 10px;
+        padding-top: 30px;
+    }
+    .header-info-text h1 {
+        font-size: 260%;
+        line-height: 2.4rem;
+    }
+    .header-info-text h4 {
+        font-size: 70%;
+    }
+    .header-info img {
+        height: 330px;
+        width: 330px;
+    }
+    .first-p {
+        font-size: 100%;
+    }
+    .second-p {
+        font-size: 90%;
+    }
+    table.logo-table {
+        margin-bottom: 50px;
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #0e0e0e;
+    }
+    .logo-item {
+        display: block;
+        text-align: center;
+        padding: 20px 10px;
+        border: 1px solid #ababab;
+        width: 200px; 
+        margin: 0 auto;
+    }
+    .table-descrip {
+        font-size: 60%;
+    }
+    .logo-item span {
+        font-size: 90%;
+        text-align: center;
+    }
+    .about-me {
+        width: 350px;
+        margin-bottom: 20px;
+    }
+    .about-me p {
+        font-size: 85%;
+    }
+    .projects-main-link {
+        width: 400px;
+        margin-top: 20px;
+        margin-bottom: 35px;
+    }
+    .projects-main-link p {
+        font-size: 95%;
+        margin-left: 10px;
+        margin-right: 80px;
+        width: 230px;
+    }
+    .projects-main-link img {
+        width: 60px;
+        height: 60px;
+        margin-top: 30px;
+    }
+    .contact-me {
+        width: 400px;
+        margin-bottom: 30px;
+    }
+    .contact-me h2 {
+        margin-bottom: 30px;
+        font-size: 130%;
+    }
+    .contact-type {
+        margin-left: 20px;
+        margin-bottom: 1px;
+    }
+    .contact-type img {
+        width: 30px;
+        height: 30px;
+        margin-top: 18px;
+    }
+    .contact-type p {
+        font-size: 100%;
+        margin-left: 25px;
+    }
+    footer p {
+        font-size: 80%;
+    }
+}
+@media screen and (min-width: 600px) {
+    body {
+        width: 600px;
+    }
+    header nav a {
+        font-size: 90%;
+        margin-left: 5px;
+    }
+    .about-me-nav {
+        margin-left: 220px;
+    }
+    .header-info-text {
+        width: 270px;
+        height: 130px;
+        padding-left: 20px;
+        padding-top: 30px;
+    }
+    .header-info-text h1 {
+        font-size: 360%;
+        line-height: 3.5rem;
+    }
+    .header-info-text h4 {
+        font-size: 90%;
+    }
+    .header-info img {
+        height: 500px;
+        width: 500px;
+    }
+    table.logo-table {
+        margin-bottom: 50px;
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #0e0e0e;
+    }
+    .logo-item {
+        display: table-cell;
+        text-align: center;
+        padding: 20px 10px;
+        border: 1px solid #ababab;
+        width: 100px; 
+        margin: 0 auto;
+    }
+    .table-descrip {
+        font-size: 60%;
+    }
+    .logo-item span {
+        font-size: 90%;
+    }
+    .about-me {
+        width: 550px;
+        margin-bottom: 30px;
+    }
+    .about-me p {
+        font-size: 90%;
+    }
+    .projects-main-link {
+        width: 550px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+    .projects-main-link p {
+        font-size: 100%;
+        margin-left: 30px;
+        margin-right: 10;
+        width: 400px;
+    }
+    .projects-main-link img {
+        width: 70px;
+        height: 70px;
+        margin-top: 15px;
+    }
+    .contact-me {
+        width: 550px;
+        margin-bottom: 40px;
+    }
+    .contact-me h2 {
+        margin-bottom: 38px;
+        font-size: 135%;
+    }
+    .contact-type {
+        margin-left: 30px;
+        margin-bottom: 15px;
+    }
+    .contact-type img {
+        width: 40px;
+        height: 40px;
+        margin-top: 10px;
+    }
+    .contact-type p {
+        font-size: 110%;
+        margin-left: 30px;
+    }
+    footer p {
+        font-size: 85%;
+    }
+}
+@media screen and (min-width: 700px) {
+    body {
+        width: 700px;
+    }
+    header nav a {
+        font-size: 100%;
+        margin-left: 8px;
+    }
+    .about-me-nav {
+        margin-left: 290px;
+    }
+    .header-info {
+        display: flex;
+        flex-direction: row;
+        margin-top: 30px;
+    }
+    .header-info-text {
+        order: 1; 
+    }
+    .header-info img {
+        order: 2; 
+    }
+    .header-info-text {
+        height: 250px;
+        width: 350px;
+        padding-left: 20px;
+        padding-top: 90px;
+    }
+    .header-info-text h1 {
+        font-size: 400%;
+        line-height: 3.7rem;
+    }
+    .header-info-text h4 {
+        font-size: 100%;
+    }
+    .header-info img {
+        height: 350px;
+        width: 350px;
+    }
+    .first-p {
+        font-size: 115%;
+    }
+    table.logo-table {
+        margin-bottom: 50px;
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #0e0e0e;
+    }
+    .logo-item {
+        display: table-cell;
+        text-align: center;
+        padding: 20px 10px;
+        border: 1px solid #ababab;
+        width: 100px; 
+    }
+    .table-descrip {
+        font-size: 65%;
+    }
+    .about-me {
+        width: 650px;
+        margin-bottom: 35px;
+    }
+    .about-me p {
+        font-size: 95%;
+    }
+    .projects-main-link {
+        width: 650px;
+        margin-top: 30px;
+        margin-bottom: 60px;
+    }
+    .projects-main-link p {
+        color: white;
+        font-size: 110%;
+        margin-left: 40px;
+        margin-right: 110px;
+        width: 400px;
+    }
+    .projects-main-link img {
+        width: 70px;
+        height: 70px;
+        margin-top: 15px;
+    }
+    .contact-me {
+        width: 650px;
+        margin-bottom: 40px;
+    }
+    .contact-me h2 {
+        margin-bottom: 38px;
+        font-size: 140%;
+    }
+    .contact-type {
+        margin-left: 50px;
+        margin-bottom: 15px;
+    }
+    .contact-type img {
+        width: 60px;
+        height: 60px;
+    }
+    .contact-type p {
+        font-size: 115%;
+        margin-left: 40px;
+    }
+    footer p {
+        font-size: 90%;
+    }
+
+}
+@media screen and (min-width: 900px) {
+    body {
+        width: 900px;
+    }
+    header nav a {
+        font-size: 105%;
+    }
+    .about-me-nav {
+        margin-left: 470px;
+    }
+    .header-info-text {
+        width: 420px;
+        padding-left: 30px;
+        padding-top: 90px;
+    }
+    .header-info-text h1 {
+        font-size: 500%;
+        line-height: 4.4rem;
+    }
+    .header-info img {
+        height: 450px;
+        width: 450px;
+    }
+    table.logo-table {
+        margin-bottom: 50px;
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #0e0e0e;
+    }
+    .logo-item {
+        display: table-cell;
+        text-align: center;
+        padding: 20px 10px;
+        border: 1px solid #ababab;
+        width: 100px; 
+    }
+    .projects-main-link {
+        width: 900px;
+        margin-top: 30px;
+        margin-bottom: 60px;
+    }
+    .projects-main-link p {
+        color: white;
+        font-size: 120%;
+        margin-left: 140px;
+        margin-right: 10px;
+        width: 500px;
+    }
+    .projects-main-link img {
+        width: 100px;
+        height: 100px;
+        margin-top: 5px;
+    }
+    .about-me {
+        width: 800px;
+    }
+}
+@media screen and (min-width: 1100px) {
+    * {
+        font-family: "Poppins", sans-serif;
+    }
+    body {
+        width: 1100px;
+        background-color: #0e0e0e;
+        margin: auto;
+    }
+    header {
+        margin-bottom: 100px;
+    }
+    header nav {
+        height: 40px;
+        padding-top: 20px;
+    }
+    header nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 105%;
+        margin-left: 10px;
+        padding: 10px 20px;
+        border-radius: 17px;
+        transition: all 0.35s;
+    }
+    header nav a:hover {
+        background-color: white;
+        color: #0e0e0e;
+    }
+    .about-me-nav {
+        margin-left: 590px;
+        border: white solid 2px;
+        border-radius: 0;
+    }
+    .header-info {
+        display: flex;
+        margin-top: 50px;
+    }
+    .header-info-text {
+        margin-right: auto;
+        color: white;
+        width: 520px;
+        padding-top: 150px;
+        padding-left: 50px;
+    }
+    .header-info-text h1 {
+        font-size: 650%;
+        line-height: 5.8rem;
+        margin: 0;
+        padding: 0;
+    }
+    .header-info-text h4 {
+        margin: 0;
+        padding: 0;
+        font-size: 100%;
+    }
+    .header-info img {
+        height: 550px;
+        width: 550px;
+        margin-left: auto;
+    }
+    .to-table {
+        color: #adadad;
+        text-align: center;
+    }
+    .first-p {
+        color: #90ff00;
+        font-weight: bold;
+        font-size: 120%;
+        margin-bottom: 0;
+    }
+    .second-p {
+        margin-top: 0;
+    }
+    table.logo-table {
+        margin-bottom: 50px;
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #0e0e0e;
+    }
+    .logo-item {
+        display: table-cell;
+        text-align: center;
+        padding: 20px 10px;
+        border: 1px solid #ababab;
+        width: 100px; 
+    }
+    .logo-item span {
+        color: #fff;
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    .table-descrip {
+        font-size: 80%;
+        text-transform: none;
+        color: #d5d5d5;
+    }
+    .about-me {
+        color: white;
+        width: 900px;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+    .about-me h2 {
+        text-align: center;
+    }
+    .projects-main-link {
+        display: flex;
+        width: 800px;
+        margin: auto;
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+    .projects-main-link p {
+        color: white;
+        font-size: 120%;
+        margin-left: 80px;
+        margin-right: 120px;
+        margin-top: 37px;
+    }
+    .projects-main-link p a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        color: #90ff00;
+        margin-left: 10px;
+        transition: all 0.3s;
+    }.projects-main-link p a:hover {
+        color: #ccff8a;
+    }
+    .contact-me {
+        color: white;
+        width: 800px;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+    
+    .contact-me h2 {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    .contact-type {
+        display: flex;
+        margin-left: 70px;
+        margin-bottom: 30px;
+    }
+    .contact-type img {
+        width: 90px;
+        height: 90px;
+        margin-top: 0px;
+        margin-bottom: 5px;
+    }
+    .contact-type p {
+        font-size: 120%;
+        margin-left: 50px;
+    }
+    footer {
+        color: white;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

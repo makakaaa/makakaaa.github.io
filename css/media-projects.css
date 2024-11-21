@@ -1,0 +1,213 @@
+@media screen and (min-width: 300px) {
+    body {
+        width: 300px;
+    }
+    header {
+        margin-bottom: 30px;
+    }
+    header nav a {
+        font-size: 75%;
+        margin-left: 5px;
+        padding: 1px 3px;
+    }
+    .about-me-nav {
+        margin-left: 40px;
+    }
+    main h1 {
+        font-size: 130%;
+    }
+    #list-projects {
+        width: 300px;
+        margin: 0;
+        padding: 0;
+        margin-top: 40px;
+        margin-left: 0px;
+    }
+    #list-projects ul {
+        margin-left: 0px;
+    }
+    #list-projects ul li a {
+        font-size: 85%;
+    }
+    footer {
+        font-size: 70%;
+    }
+}
+@media screen and (min-width: 400px) {
+    body {
+        width: 400px;
+    }
+    header {
+        margin-bottom: 40px;
+    }
+    header nav a {
+        font-size: 80%;
+        margin-left: 5px;
+        padding: 5px 10px;
+    }
+    .about-me-nav {
+        margin-left: 60px;
+    }
+    main h1 {
+        font-size: 155%;
+    }
+    #list-projects {
+        width: 400px;
+        margin: 0;
+        padding: 0;
+        margin-top: 40px;
+        margin-left: 0px;
+    }
+    #list-projects ul {
+        margin-left: 0px;
+    }
+    #list-projects ul li a {
+        font-size: 90%;
+    }
+    footer {
+        font-size: 85%;
+    }
+}
+@media screen and (min-width: 600px) {
+    body {
+        width: 600px;
+    }
+    header nav a {
+        font-size: 90%;
+        margin-left: 5px;
+    }
+    .about-me-nav {
+        margin-left: 220px;
+    }
+    main h1 {
+        font-size: 180%;
+    }
+    #list-projects {
+        width: 600px;
+        margin: 0;
+        padding: 0;
+        margin-top: 50px;
+        margin-left: 0px;
+    }
+    #list-projects ul {
+        margin-left: 20px;
+    }
+    #list-projects ul li a {
+        font-size: 100%;
+    }
+}
+@media screen and (min-width: 700px) {
+    body {
+        width: 700px;
+    }
+    header nav a {
+        font-size: 100%;
+        margin-left: 8px;
+    }
+    .about-me-nav {
+        margin-left: 290px;
+    }
+    main h1 {
+        font-size: 190%;
+    }
+    #list-projects {
+        width: 700px;
+        margin: 0;
+        padding: 0;
+        margin-top: 70px;
+        margin-left: 0px;
+    }
+    #list-projects ul {
+        margin-left: 30px;
+    }
+}
+@media screen and (min-width: 900px) {
+    body {
+        width: 900px;
+    }
+    header nav a {
+        font-size: 105%;
+    }
+    .about-me-nav {
+        margin-left: 470px;
+    }
+    main h1 {
+        font-size: 200%;
+    }
+    #list-projects {
+        width: 900px;
+        margin: 0;
+        padding: 0;
+        margin-top: 70px;
+        margin-left: 0px;
+    }
+    #list-projects ul {
+        margin-left: 80px;
+    }
+}
+@media screen and (min-width: 1100px) {
+    body {
+        width: 1100px;
+    }
+    header {
+        margin-bottom: 100px;
+    }
+    header nav {
+        height: 40px;
+        padding-top: 20px;
+    }
+    header nav a {
+        font-size: 105%;
+        margin-left: 10px;
+        padding: 10px 20px;
+        border-radius: 17px;
+    }
+    .about-me-nav {
+        margin-left: 590px;
+    }
+    main h1 {
+        color: white;
+        text-align: center;
+    }
+    #list-projects {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        margin-top: 70px;
+        margin-left: 230px;
+    }
+    li::marker {
+        color: #ffffff;
+      }
+    #list-projects ul li a {
+        font-size: 120%;
+        color: #ffffff;
+        transition: all 0.3s;
+        text-decoration-thickness: 1px;
+    }
+    #list-projects ul li a:hover {
+        color: #ffffff;
+        filter: drop-shadow(2px 2px 2px #90ff00);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

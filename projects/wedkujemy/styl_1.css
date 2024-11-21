@@ -1,0 +1,51 @@
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: #4682B4;
+    color: white;
+    padding: 20px;
+    font-size: 120%;
+    text-align: center;
+}
+
+main {
+    display: flex;
+}
+
+.blok-lewy {
+    background-color: #40E0D0;
+    width: 40%;
+    height: 500px;
+    padding: 20px;
+}
+
+.blok-prawy {
+    background-color: #40E0D0;
+    width: 60%;
+    height: 500px;
+    padding: 20px;
+    text-align: center;
+}
+
+img {
+    width: 550px;
+    height: auto;
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid #000080;
+}
+
+a {
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #000080;
+}
+
+footer p {
+    margin: 0;
+}
