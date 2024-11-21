@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /licence/
+Disallow: /log/
+
+
+Sitemap: https://maksym.online/sitemap.xml
