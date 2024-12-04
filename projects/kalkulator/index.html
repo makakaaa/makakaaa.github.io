@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Matematyczny</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #4caf50, #81c784);
+            color: #fff;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background: #388e3c;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: #ffffff;
+            color: #333;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #388e3c;
+        }
+
+        label, input, button {
+            display: block;
+            width: 100%;
+            margin: 5px 0;
+        }
+
+        input, button {
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background: #388e3c;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #2e7d32;
+        }
+
+        .result {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #2e7d32;
+        }
+        h1 {
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9rem;
+            color: #e0e0e0;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                font-size: 90%;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Kalkulator Matematyczny</h1>
+
+ 
+    <div class="container">
+        <h2>Zadanie 1: Obwód kwadratu</h2>
+        <label for="squareSide">Bok kwadratu (a):</label>
+        <input type="number" id="squareSide" step="0.1">
+        <button onclick="calculateSquarePerimeter()">Oblicz</button>
+        <p class="result" id="squareResult"></p>
+    </div>
+
+    
+    <div class="container">
+        <h2>Zadanie 2: Objętość i pole powierzchni bocznej sześcianu</h2>
+        <label for="cubeEdge">Krawędź sześcianu (a):</label>
+        <input type="number" id="cubeEdge" step="0.1">
+        <button onclick="calculateCube()">Oblicz</button>
+        <p class="result" id="cubeResult"></p>
+    </div>
+
+    
+    <div class="container">
+        <h2>Zadanie 3: Pole i obwód koła</h2>
+        <label for="circleRadius">Promień okręgu (r):</label>
+        <input type="number" id="circleRadius" step="0.1">
+        <button onclick="calculateCircle()">Oblicz</button>
+        <p class="result" id="circleResult"></p>
+    </div>
+
+    
+    <div class="container">
+        <h2>Zadanie 4: Gęstość substancji</h2>
+        <label for="volume">Objętość (V):</label>
+        <input type="number" id="volume" step="0.1">
+        <label for="mass">Masa (m):</label>
+        <input type="number" id="mass" step="0.1">
+        <button onclick="calculateDensity()">Oblicz</button>
+        <p class="result" id="densityResult"></p>
+    </div>
+
+
+    <div class="container">
+        <h2>Zadanie 5: Gęstość zaludnienia</h2>
+        <label for="population">Liczba mieszkańców:</label>
+        <input type="number" id="population">
+        <label for="area">Powierzchnia (km²):</label>
+        <input type="number" id="area" step="0.1">
+        <button onclick="calculatePopulationDensity()">Oblicz</button>
+        <p class="result" id="populationDensityResult"></p>
+    </div>
+    <div class="container">
+        <h2>Zadanie 6: Znajdź przeciwprostokątną</h2>
+        <label for="angleA">Kąt A (w stopniach):</label>
+        <input type="number" id="angleA" step="0.1" placeholder="Podaj pierwszy kąt">
+        <label for="angleB">Kąt B (w stopniach):</label>
+        <input type="number" id="angleB" step="0.1" placeholder="Podaj drugi kąt">
+        <label for="side">Długość przyprostokątnej:</label>
+        <input type="number" id="side" step="0.1" placeholder="Podaj długość przyprostokątnej">
+        <button onclick="calculateHypotenuse()">Oblicz</button>
+        <p class="result" id="hypotenuseResult"></p>
+    </div>
+
+   
+    <div class="container">
+        <h2>Zadanie 7: Oblicz wartość y</h2>
+        <label for="inputA">Wartość a:</label>
+        <input type="number" id="inputA" step="0.1" placeholder="Podaj wartość a">
+        <button onclick="calculateY()">Oblicz</button>
+        <p class="result" id="yResult"></p>
+    </div>
+
+    <script>
+        function calculateSquarePerimeter() {
+            const a = parseFloat(document.getElementById('squareSide').value);
+            if (!a || a <= 0) {
+                document.getElementById('squareResult').textContent = "Podaj poprawny bok kwadratu.";
+                return;
+            }
+            document.getElementById('squareResult').textContent = `Obwód kwadratu: ${4 * a}`;
+        }
+
+        function calculateCube() {
+            const a = parseFloat(document.getElementById('cubeEdge').value);
+            if (!a || a <= 0) {
+                document.getElementById('cubeResult').textContent = "Podaj poprawną długość krawędzi.";
+                return;
+            }
+            const volume = Math.pow(a, 3);
+            const surfaceArea = 6 * Math.pow(a, 2);
+            document.getElementById('cubeResult').textContent = `Objętość: ${volume}, Pole powierzchni: ${surfaceArea}`;
+        }
+
+        function calculateCircle() {
+            const r = parseFloat(document.getElementById('circleRadius').value);
+            if (!r || r <= 0) {
+                document.getElementById('circleResult').textContent = "Podaj poprawny promień.";
+                return;
+            }
+            const circumference = 2 * Math.PI * r;
+            const area = Math.PI * Math.pow(r, 2);
+            document.getElementById('circleResult').textContent = `Obwód: ${circumference.toFixed(2)}, Pole: ${area.toFixed(2)}`;
+        }
+
+        function calculateDensity() {
+            const V = parseFloat(document.getElementById('volume').value);
+            const m = parseFloat(document.getElementById('mass').value);
+            if (!V || V <= 0 || !m || m <= 0) {
+                document.getElementById('densityResult').textContent = "Podaj poprawne dane.";
+                return;
+            }
+            document.getElementById('densityResult').textContent = `Gęstość: ${(m / V).toFixed(2)} kg/m³`;
+        }
+
+        function calculatePopulationDensity() {
+            const population = parseInt(document.getElementById('population').value);
+            const area = parseFloat(document.getElementById('area').value);
+            if (!population || population <= 0 || !area || area <= 0) {
+                document.getElementById('populationDensityResult').textContent = "Podaj poprawne dane.";
+                return;
+            }
+            document.getElementById('populationDensityResult').textContent = `Gęstość zaludnienia: ${(population / area).toFixed(2)} osób/km²`;
+        }
+
+        function calculateHypotenuse() {
+            const angleA = parseFloat(document.getElementById('angleA').value);
+            const angleB = parseFloat(document.getElementById('angleB').value);
+            const side = parseFloat(document.getElementById('side').value);
+
+            if (!angleA || !angleB || !side || angleA + angleB >= 90) {
+                document.getElementById('hypotenuseResult').textContent = "Podaj poprawne kąty i długość.";
+                return;
+            }
+
+            const angleC = 90; // Trójkąt prostokątny
+            const hypotenuse = side / Math.cos(angleA * Math.PI / 180);
+            document.getElementById('hypotenuseResult').textContent = `Przeciwprostokątna: ${hypotenuse.toFixed(2)}`;
+        }
+
+        function calculateY() {
+            const a = parseFloat(document.getElementById('inputA').value);
+            if (!a && a !== 0) {
+                document.getElementById('yResult').textContent = "Podaj poprawną wartość a.";
+                return;
+            }
+
+            const y = (Math.pow(a, 2) + 10) / Math.sqrt(Math.pow(a, 2) + 1);
+            document.getElementById('yResult').textContent = `y = ${y.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>
