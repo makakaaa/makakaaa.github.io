@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="ru" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            bg: '#0f1119',
+                            secondary: '#12141e',
+                            card: '#1a1c25',
+                            accent: '#4f46e5'
+                        },
+                        light: {
+                            bg: '#f8fafc',
+                            secondary: '#f1f5f9',
+                            card: '#ffffff',
+                            accent: '#4f46e5'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #4f46e5, #8b5cf6, #3b82f6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            background-size: 200% auto;
+            animation: textShine 5s ease-in-out infinite alternate;
+        }
+        
+        .gradient-border {
+            position: relative;
+            border-radius: 0.5rem;
+            transition: background-color 0.3s ease;
+        }
+        
+        .gradient-border::before {
+            content: "";
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #4f46e5, #8b5cf6, #3b82f6, #4f46e5);
+            border-radius: 0.6rem;
+            z-index: -1;
+            background-size: 300% 300%;
+            animation: borderAnimation 8s ease-in-out infinite;
+        }
+        
+        @keyframes textShine {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+        
+        @keyframes borderAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        
+        .skill-bar {
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+            transition: background-color 0.3s ease;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            border-radius: 4px;
+            background: linear-gradient(90deg, #4f46e5, #8b5cf6);
+            animation: progressAnimation 1.5s ease-out forwards;
+            transform-origin: left;
+            transform: scaleX(0);
+        }
+        
+        @keyframes progressAnimation {
+            to {
+                transform: scaleX(1);
+            }
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background: linear-gradient(90deg, #4f46e5, #8b5cf6);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .photo-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+        
+        .photo-container::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, rgba(79, 70, 229, 0) 40%, rgba(79, 70, 229, 0.3) 50%, rgba(79, 70, 229, 0) 60%);
+            animation: shimmer 3s infinite;
+        }
+        
+        @keyframes shimmer {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .skill-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .theme-toggle {
+            cursor: pointer;
+            position: relative;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            border-radius: 50%;
+        }
+        
+        .theme-toggle:hover {
+            background-color: rgba(79, 70, 229, 0.1);
+        }
+        
+        .theme-toggle svg {
+            transition: transform 0.5s ease, opacity 0.3s ease;
+        }
+        
+        .social-icon {
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-3px);
+        }
+
+        
+    </style>
+</head>
+<body class="dark:bg-dark-bg dark:text-gray-100 bg-light-bg text-gray-800">
+    <header class="fixed top-0 left-0 right-0 dark:bg-dark-bg/90 bg-light-bg/90 backdrop-blur-md z-50 dark:border-b dark:border-indigo-900/30 border-b border-gray-200 transition-colors duration-300">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div>
+                <h1 class="text-xl font-bold gradient-text"></h1>
+            </div>
+            <nav class="flex items-center">
+                <ul class="flex space-x-6 mr-6">
+                    <li><a href="index.html#home" class="nav-link dark:text-gray-300 text-gray-600 hover:text-gray-900 dark:hover:text-white transition">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link dark:text-gray-300 text-gray-600 hover:text-gray-900 dark:hover:text-white transition">About</a></li>
+                    <li><a href="project.html" class="nav-link dark:text-gray-300 text-gray-600 hover:text-gray-900 dark:hover:text-white transition">Projects</a></li>
+                    <li><a href="index.html#contact" class="nav-link dark:text-gray-300 text-gray-600 hover:text-gray-900 dark:hover:text-white transition">Contact</a></li>
+                </ul>
+                <div id="themeToggle" class="theme-toggle">
+                    <!-- Moon icon for dark mode -->
+                    <svg id="moonIcon" class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <!-- Sun icon for light mode -->
+                    <svg id="sunIcon" class="w-5 h-5 text-yellow-500 absolute opacity-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+                    </svg>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+  <!-- Main -->
+<main class="pt-24 pb-20">
+  <section class="container mx-auto px-4">
+    <div class="mb-10 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-3">
+        My <span class="gradient-text">Projects</span>
+      </h1>
+      <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        A selection of works: real case studies and educational mini-projects. Click “View More” to open detailed information in a modal window.
+      </p>
+    </div>
+
+
+      
+
+
+
+
+<!-- Projects Section -->
+<section id="projects" class="py-16 transition-colors duration-300">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+            <!-- Project 1 -->
+            <div class="fade-in skill-card dark:bg-dark-card bg-light-card rounded-lg overflow-hidden dark:border dark:border-indigo-900/30 border border-gray-200 dark:shadow-none shadow-md">
+                <img src="img/Project1.png" class="h-48 dark:bg-gradient-to-br dark:from-indigo-600/20 dark:to-purple-600/20 bg-gradient-to-br from-indigo-100 to-purple-100 flex items-center justify-center">
+                    
+                </img>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-3">Portfolio Website</h3>
+                    <p class="dark:text-gray-400 text-gray-600 mb-4">
+                        A modern personal portfolio showcasing skills, projects, and contact details. 
+                        Fully responsive with a dark/light mode toggle and performance-focused design.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 text-xs rounded-full dark:bg-indigo-600/20 dark:text-indigo-400 bg-indigo-100 text-indigo-600">HTML5</span>
+                        <span class="px-2 py-1 text-xs rounded-full dark:bg-indigo-600/20 dark:text-indigo-400 bg-indigo-100 text-indigo-600">CSS3</span>
+                        <span class="px-2 py-1 text-xs rounded-full dark:bg-indigo-600/20 dark:text-indigo-400 bg-indigo-100 text-indigo-600">JavaScript</span>
+                        <span class="px-2 py-1 text-xs rounded-full dark:bg-indigo-600/20 dark:text-indigo-400 bg-indigo-100 text-indigo-600">Tailwind CSS</span>
+                    </div>
+                    <div class="text-center">
+                        <button data-modal="modal1" class="open-modal dark:text-indigo-400 text-indigo-600 hover:text-indigo-700 dark:hover:text-indigo-300 underline underline-offset-2 transition duration-300">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="fade-in skill-card dark:bg-dark-card bg-light-card rounded-lg overflow-hidden dark:border dark:border-indigo-900/30 border border-gray-200 dark:shadow-none shadow-md">
+                <img src="img/Project2.png" class="h-48 dark:bg-gradient-to-br dark:from-indigo-600/20 dark:to-purple-600/20 bg-gradient-to-br from-indigo-100 to-purple-100 flex items-center justify-center">
+                    
+                </img>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-3">C1 Exam Prep Page</h3>
+                    <p class="dark:text-gray-400 text-gray-600 mb-4">
+                        A conversion-focused landing page for Polish language C1 exam preparation. 
+                        Includes pricing packages, social proof, and a Telegram-integrated sign-up form.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 text-xs rounded-full dark:bg-rose-600/20 dark:text-rose-400 bg-rose-100 text-rose-600">HTML5</span>
+                        <span class="px-2 py-1 text-xs rounded-full dark:bg-rose-600/20 dark:text-rose-400 bg-rose-100 text-rose-600">Tailwind CSS</span>
+                        <span class="px-2 py-1 text-xs rounded-full dark:bg-rose-600/20 dark:text-rose-400 bg-rose-100 text-rose-600">JavaScript</span>
+                        <span class="px-2 py-1 text-xs rounded-full dark:bg-rose-600/20 dark:text-rose-400 bg-rose-100 text-rose-600">Telegram Bot API</span>
+                    </div>
+                    <div class="text-center">
+                        <button data-modal="modal2" class="open-modal dark:text-rose-400 text-rose-600 hover:text-rose-700 dark:hover:text-rose-300 underline underline-offset-2 transition duration-300">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Modal 1 — Portfolio Website -->
+<div id="modal1" class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50">
+  <div class="bg-white dark:bg-[#121317] p-8 rounded-2xl max-w-5xl w-full relative shadow-2xl
+              max-h-[85vh] overflow-y-auto">
+    <!-- Close -->
+    <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-200 dark:text-gray-400 
+                   dark:hover:text-white close-modal text-4xl font-bold leading-none">&times;</button>
+
+    <!-- Title -->
+    <h3 class="text-3xl font-semibold tracking-tight mb-2">Portfolio Website</h3>
+    <p class="dark:text-gray-400 text-gray-600 mb-6">
+      A modern personal portfolio showcasing skills, projects, and professional background with a smooth user experience.
+    </p>
+
+    
+    <!-- Project Overview -->
+    <h4 class="text-xl font-semibold mb-3">Project Overview</h4>
+    <p class="dark:text-gray-300 text-gray-700">
+      This project is a personal portfolio website designed to highlight my skills, projects, and contact information. 
+      It features a clean, responsive design with a dark/light mode toggle, ensuring accessibility and optimal viewing on all devices.
+    </p>
+
+    <div class="my-6 border-t dark:border-slate-800 border-slate-200"></div>
+
+    <!-- Tech -->
+    <h4 class="text-xl font-semibold mb-3">Technologies Used</h4>
+    <div class="flex flex-wrap gap-2">
+      <span class="px-3 py-1 rounded-full text-xs font-medium dark:bg-slate-800/70 bg-slate-100 dark:text-slate-200 text-slate-700 border dark:border-slate-700">HTML5</span>
+      <span class="px-3 py-1 rounded-full text-xs font-medium dark:bg-slate-800/70 bg-slate-100 dark:text-slate-200 text-slate-700 border dark:border-slate-700">CSS3</span>
+      <span class="px-3 py-1 rounded-full text-xs font-medium dark:bg-slate-800/70 bg-slate-100 dark:text-slate-200 text-slate-700 border dark:border-slate-700">JavaScript</span>
+      <span class="px-3 py-1 rounded-full text-xs font-medium dark:bg-slate-800/70 bg-slate-100 dark:text-slate-200 text-slate-700 border dark:border-slate-700">Tailwind CSS</span>
+    </div>
+
+    <div class="my-6 border-t dark:border-slate-800 border-slate-200"></div>
+
+    <!-- Key Features -->
+    <h4 class="text-xl font-semibold mb-3">Key Features</h4>
+    <ul class="space-y-2 list-disc pl-5 dark:text-gray-300 text-gray-700">
+      <li>Responsive design for all devices</li>
+      <li>Dark / light mode toggle</li>
+      <li>Interactive project showcase with smooth scrolling</li>
+      <li>Skills visualization cards</li>
+      <li>Contact section with clear call-to-actions</li>
+      <li>Optimized performance with minimal JavaScript</li>
+    </ul>
+
+    <div class="my-6 border-t dark:border-slate-800 border-slate-200"></div>
+
+    <!-- My Role -->
+    <h4 class="text-xl font-semibold mb-3">My Role</h4>
+    <p class="dark:text-gray-300 text-gray-700">
+      I handled the full project lifecycle: wireframing, UI/UX design, frontend implementation, accessibility adjustments, 
+      and deployment. I focused on micro-interactions and performance optimization to ensure a fast, user-friendly experience.
+    </p>
+
+    <div class="my-8 text-center">
+      <a href="https://maksym.online" target="_blank" 
+         class="inline-block px-6 py-3 rounded-lg bg-indigo-600 text-white font-medium hover:bg-indigo-500 transition-colors duration-300">
+        Visit Live Site
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 2 — C1 Exam Prep Landing -->
+<div id="modal2" class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50">
+  <div class="bg-white dark:bg-[#121317] p-8 rounded-2xl max-w-5xl w-full relative shadow-2xl
+              max-h-[85vh] overflow-y-auto">
+    <!-- Close -->
+    <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-200 dark:text-gray-400 
+                   dark:hover:text-white close-modal text-4xl font-bold leading-none">&times;</button>
+
+    <!-- Title -->
+    <h3 class="text-3xl font-semibold tracking-tight mb-2">C1 Exam Prep Landing Page</h3>
+    <p class="dark:text-gray-400 text-gray-600 mb-6">
+      A high-converting landing page for a Polish language tutor specializing in C1 exam preparation.
+    </p>
+
+    
+    <!-- Project Overview -->
+    <h4 class="text-xl font-semibold mb-3">Project Overview</h4>
+    <p class="dark:text-gray-300 text-gray-700">
+      This landing page is designed to drive student sign-ups for C1 exam preparation. 
+      It clearly communicates the value proposition, presents multiple pricing tiers, 
+      showcases social proof, and integrates a direct sign-up form for lead capture.
+    </p>
+
+    <div class="my-6 border-t dark:border-slate-800 border-slate-200"></div>
+
+    <!-- Tech -->
+    <h4 class="text-xl font-semibold mb-3">Technologies Used</h4>
+    <div class="flex flex-wrap gap-2">
+      <span class="px-3 py-1 rounded-full text-xs font-medium dark:bg-slate-800/70 bg-slate-100 dark:text-slate-200 text-slate-700 border dark:border-slate-700">HTML5</span>
+      <span class="px-3 py-1 rounded-full text-xs font-medium dark:bg-slate-800/70 bg-slate-100 dark:text-slate-200 text-slate-700 border dark:border-slate-700">Tailwind CSS</span>
+      <span class="px-3 py-1 rounded-full text-xs font-medium dark:bg-slate-800/70 bg-slate-100 dark:text-slate-200 text-slate-700 border dark:border-slate-700">JavaScript</span>
+      <span class="px-3 py-1 rounded-full text-xs font-medium dark:bg-slate-800/70 bg-slate-100 dark:text-slate-200 text-slate-700 border dark:border-slate-700">Telegram Bot API (form handling)</span>
+    </div>
+
+    <div class="my-6 border-t dark:border-slate-800 border-slate-200"></div>
+
+    <!-- Key Features -->
+    <h4 class="text-xl font-semibold mb-3">Key Features</h4>
+    <ul class="space-y-2 list-disc pl-5 dark:text-gray-300 text-gray-700">
+      <li>Hero section with strong headline and dual CTA buttons</li>
+      <li>Clear pricing packages and single-lesson options</li>
+      <li>Social proof via student results and testimonials</li>
+      <li>Sign-up form integrated with Telegram for instant notifications</li>
+      <li>Fully responsive design with fast load times</li>
+      <li>Clean visual hierarchy and distraction-free layout</li>
+    </ul>
+
+    <div class="my-6 border-t dark:border-slate-800 border-slate-200"></div>
+
+    <!-- My Role -->
+    <h4 class="text-xl font-semibold mb-3">My Role</h4>
+    <p class="dark:text-gray-300 text-gray-700">
+      I conducted target audience research, structured the content, wrote compelling copy, 
+      designed the layout, implemented the site with Tailwind CSS, integrated the sign-up form, 
+      and optimized for conversions with strategic CTAs and trust-building elements.
+    </p>
+
+    <div class="my-8 text-center">
+      <a href="https://oleh-zinchuk.com" target="_blank" 
+         class="inline-block px-6 py-3 rounded-lg bg-rose-600 text-white font-medium hover:bg-rose-500 transition-colors duration-300">
+        Visit Live Site
+      </a>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+document.querySelectorAll('.open-modal').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const modalId = btn.getAttribute('data-modal');
+        document.getElementById(modalId).classList.remove('hidden');
+        document.getElementById(modalId).classList.add('flex');
+    });
+});
+
+document.querySelectorAll('.close-modal').forEach(btn => {
+    btn.addEventListener('click', () => {
+        btn.closest('div[id^="modal"]').classList.add('hidden');
+        btn.closest('div[id^="modal"]').classList.remove('flex');
+    });
+});
+
+document.querySelectorAll('div[id^="modal"]').forEach(modal => {
+    modal.addEventListener('click', e => {
+        if (e.target === modal) {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+    });
+});
+</script>
+
+
+        
+
+
+                            
+                           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+        // Theme toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.getElementById('themeToggle');
+            const moonIcon = document.getElementById('moonIcon');
+            const sunIcon = document.getElementById('sunIcon');
+            const html = document.documentElement;
+            
+            // Check for saved theme preference or default to dark
+            const savedTheme = localStorage.getItem('theme');
+            
+            if (savedTheme === 'light') {
+                html.classList.remove('dark');
+                moonIcon.style.opacity = '0';
+                sunIcon.style.opacity = '1';
+            } else {
+                // Default to dark theme
+                html.classList.add('dark');
+                moonIcon.style.opacity = '1';
+                sunIcon.style.opacity = '0';
+                if (!savedTheme) {
+                    localStorage.setItem('theme', 'dark');
+                }
+            }
+            
+            // Toggle theme on click
+            themeToggle.addEventListener('click', function() {
+                if (html.classList.contains('dark')) {
+                    html.classList.remove('dark');
+                    localStorage.setItem('theme', 'light');
+                    moonIcon.style.opacity = '0';
+                    sunIcon.style.opacity = '1';
+                } else {
+                    html.classList.add('dark');
+                    localStorage.setItem('theme', 'dark');
+                    moonIcon.style.opacity = '1';
+                    sunIcon.style.opacity = '0';
+                }
+            });
+            
+            // Intersection Observer for fade-in animations
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            fadeElements.forEach(element => {
+                observer.observe(element);
+            });
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
